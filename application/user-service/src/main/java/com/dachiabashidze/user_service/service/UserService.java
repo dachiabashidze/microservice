@@ -43,9 +43,9 @@ public class UserService {
         return webClient.get()
                 .uri("http://order-service/orders/username/{userName}", userName)
                 .retrieve()
-                .bodyToFlux(OrderDTO.class)   // expects multiple results
-                .collectList()                // collect to List<OrderDTO>
-                .block();                     // block to get the result synchronously
+                .bodyToFlux(OrderDTO.class)   
+                .collectList()               
+                .block();                     
     }
 
 
